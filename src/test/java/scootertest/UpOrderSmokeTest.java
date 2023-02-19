@@ -1,5 +1,7 @@
 package scootertest;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.Test;
 import pageobject.FirstOrderPage;
 import pageobject.MainPage;
@@ -9,6 +11,8 @@ import pageobject.ThirdOrderPage;
 public class UpOrderSmokeTest extends TestBaseFox {
     // TestBaseFox { - вариант класса для проверки ФайрФокса
     @Test
+    @DisplayName("Минимальная длина строк")
+    @Description("Тестируем минимальные длины вводимых строк для заполнения полей формы заказа")
     public void testSmokeWithMinimumData() {         // создаем 4 страницы для теста
         MainPage mainPage = new MainPage(driver);
         FirstOrderPage firstOrderPage = new FirstOrderPage(driver);

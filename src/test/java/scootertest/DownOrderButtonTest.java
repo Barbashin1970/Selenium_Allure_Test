@@ -1,5 +1,7 @@
 package scootertest;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.junit4.DisplayName;
 import org.junit.Test;
 import pageobject.FirstOrderPage;
 import pageobject.MainPage;
@@ -10,6 +12,8 @@ public class DownOrderButtonTest extends TestBaseFox {   // - это для Хр
     // TestBaseFox { // - вариант класса для проверки ФайрФокса
 
     @Test
+    @DisplayName("Максимальная длина строк")
+    @Description("Тестируем максимальные длины вводимых строк для заполнения полей формы заказа")
     public void testOfDownOrderButton() {
         MainPage mainPage = new MainPage(driver);
         FirstOrderPage firstOrderPage = new FirstOrderPage(driver);
