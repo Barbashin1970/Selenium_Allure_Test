@@ -8,23 +8,23 @@ import org.openqa.selenium.WebElement;
 public class MainPage {
     private final WebDriver webDriver;
     // локатор кнопки Куки
-    private By cookieButton = By.id("rcc-confirm-button");
+    private final By cookieButton = By.id("rcc-confirm-button");
     // локатор для кнопки Заказать которая внизу
-    private By orderButtonDown = By.className("Button_Middle__1CSJM");
+    private final By orderButtonDown = By.className("Button_Middle__1CSJM");
     // ревью замена -  By.xpath("/html/body/div/div/div/div[4]/div[2]/div[5]/button");
     // локатор для кнопки Заказать которая вверху
-    private By orderButtonUp = By.className("Button_Button__ra12g");
+    private final By orderButtonUp = By.className("Button_Button__ra12g");
     // локаторы кнопок раздела Вопросы о важном с номера 0 до номера 7 - 8 штук
-    private By questionButton_0 = By.id("accordion__heading-0");
-    private By questionButton_1 = By.id("accordion__heading-1");
-    private By questionButton_2 = By.id("accordion__heading-2");
-    private By questionButton_3 = By.id("accordion__heading-3");
-    private By questionButton_4 = By.id("accordion__heading-4");
-    private By questionButton_5 = By.id("accordion__heading-5");
-    private By questionButton_6 = By.id("accordion__heading-6");
-    private By questionButton_7 = By.id("accordion__heading-7");
+    private final By questionButton_0 = By.id("accordion__heading-0");
+    private final By questionButton_1 = By.id("accordion__heading-1");
+    private final By questionButton_2 = By.id("accordion__heading-2");
+    private final By questionButton_3 = By.id("accordion__heading-3");
+    private final By questionButton_4 = By.id("accordion__heading-4");
+    private final By questionButton_5 = By.id("accordion__heading-5");
+    private final By questionButton_6 = By.id("accordion__heading-6");
+    private final By questionButton_7 = By.id("accordion__heading-7");
     //Массив из локаторов кнопок раздела Вопрсоы о важном
-    private By[] questionButtonArray = {
+    private final By[] questionButtonArray = {
             questionButton_0,
             questionButton_1,
             questionButton_2,
@@ -35,16 +35,16 @@ public class MainPage {
             questionButton_7
     };
     //локаторы к полям текстовых ответов раздела Вопросы о важном
-    private By answerField_0 = By.xpath(".//div[@id='accordion__panel-0']/p");
-    private By answerField_1 = By.xpath(".//div[@id='accordion__panel-1']/p");
-    private By answerField_2 = By.xpath(".//div[@id='accordion__panel-2']/p");
-    private By answerField_3 = By.xpath(".//div[@id='accordion__panel-3']/p");
-    private By answerField_4 = By.xpath(".//div[@id='accordion__panel-4']/p");
-    private By answerField_5 = By.xpath(".//div[@id='accordion__panel-5']/p");
-    private By answerField_6 = By.xpath(".//div[@id='accordion__panel-6']/p");
-    private By answerField_7 = By.xpath(".//div[@id='accordion__panel-7']/p");
+    private final By answerField_0 = By.xpath(".//div[@id='accordion__panel-0']/p");
+    private final By answerField_1 = By.xpath(".//div[@id='accordion__panel-1']/p");
+    private final By answerField_2 = By.xpath(".//div[@id='accordion__panel-2']/p");
+    private final By answerField_3 = By.xpath(".//div[@id='accordion__panel-3']/p");
+    private final By answerField_4 = By.xpath(".//div[@id='accordion__panel-4']/p");
+    private final By answerField_5 = By.xpath(".//div[@id='accordion__panel-5']/p");
+    private final By answerField_6 = By.xpath(".//div[@id='accordion__panel-6']/p");
+    private final By answerField_7 = By.xpath(".//div[@id='accordion__panel-7']/p");
     //Массив локаторов из текстовых ответов раздела Вопрсоы о важном
-    private By[] answerFieldTextArray = {
+    private final By[] answerFieldTextArray = {
             answerField_0,
             answerField_1,
             answerField_2,
@@ -88,8 +88,7 @@ public class MainPage {
 
     // геттер возвращает по параметру j тот текст ответа, который там найдется
     public String getTextFromNumberButton(int j) {
-        String text = webDriver.findElement(answerFieldTextArray[j]).getText();
-        return text;
+        return webDriver.findElement(answerFieldTextArray[j]).getText();
     }
 
     // метод скроллит до кнопки Заказать которая внизу

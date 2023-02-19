@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import pageobject.MainPage;
 
-public class MainQuestionsTestChrome extends TestBaseChrome {
+public class MainQuestionsTest extends TestBaseChrome {
     // TestBaseFox { - вариант класса для проверки ФайрФокса
 
     ArrayOfTextData arrayOfTextData = new ArrayOfTextData();
